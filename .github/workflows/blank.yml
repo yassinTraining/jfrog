@@ -30,11 +30,11 @@ jobs:
         with:
           version: latest
         env:
-          JF_URL: ${{ secret.JFROG_URL }}
-          JF_USER: ${{ secret.JFROG_USR }}
-          JF_ACCESS_TOKEN: ${{ secret.JFROG_TOKEN }}
+          JF_URL: ${{ secret.JF_URL }}
+          JF_USER: ${{ secret.JF_USER }}
+          JF_ACCESS_TOKEN: ${{ secret.JF_ACCESS_TOKEN }}
     
       - name: archive creation
         run: |
-          jf rt u "**" generic-local/toto.zip --archive zip --include-dirs |
-          jf rt bp generic-local/toto.zip
+          jf rt u "**" generic-local/Yassin.zip --archive zip --include-dirs |
+          jf rt bp generic-local/Yassin.zip
